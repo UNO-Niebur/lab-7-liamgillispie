@@ -15,20 +15,19 @@ def isPrime(p):
   if p%2==0:
     return False
   for i in range(3, int(p**0.5)+1,2):
-    if i%2==0:
-      continue
     if p%i==0:
       return False
   return True
 
-def isEven(n):
-  """Returns boolean about given value being even."""
-  if n % 2 == 0:
-    return True
-  else:
-    return False
 
 def main():
+  count=0
+  n=1
+  while count < 10001:
+    n+=1
+    if isPrime(n):
+      count+=1
+  print(f"The 10,001st prime number is {n}!")
 
 if __name__ == '__main__':
   main()
