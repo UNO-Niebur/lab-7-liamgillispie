@@ -1,8 +1,9 @@
-#Problem2.py
 #Project Euler problem 2
+#Name: Liam Gillispie
+#Date: 3/7/2026
+#Assignment: Lab 7
+#Purpose:
 
-from NumberTests import isEven
-from NumberTests import fibonacciSequence
 
 def main():
   nums = fibonacciSequence(4000001)
