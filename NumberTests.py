@@ -10,12 +10,21 @@ def isThreeOrFive(n):
 
 def isPrime(p):
   """Returns boolean (True/False) if the value given is prime."""
-
+  if p <=1:
+    return False
+  if p==2:
+    return True
+  if p%2==0:
+    return False
+  for i in range(3, int(p**0.5)+1,2):
+    if i%2==0:
+      continue
+    if p%i==0:
+      return False
   return True
 
 def isEven(n):
   """Returns boolean about given value being even."""
-
   if n % 2 == 0:
     return True
   else:
@@ -23,8 +32,8 @@ def isEven(n):
 
 def addNum(numList, num):
   """Adds the given number to the given list. Does not add duplicate values."""
-
-  numList.append(num)
+  if num not in numList:
+    numList.append(num)
 
 
 def fibonacciSequence(value):
